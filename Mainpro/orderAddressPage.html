@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up page</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script type="text/javascript" src="orderAddressPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="orderAddressPage.css">
+	<link rel="stylesheet" type="text/css" href="index1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+	<div ng-app="angularorder" ng-controller="angularCtrlorder" class="orderAddressPage" >
+		<div class="stylesheet">
+			<header>
+					<a href="/index1.html"><img id="juju" src="juju.png"/></a>
+				<input type="text" placeholder="search here..." ng-model="search1" size="38" class="searchbar" />
+				<button class="search"  ng-click="search()" size="38">Search</button><br>
+			</header>
+			<div ng-show="1==temp">
+					<button class="SignUpbutton" ng-click="signupform()" size="38">SignUp</button><br>
+				 <button class="Loginbutton" ng-click="login()" size="38">Login</button><br>	
+				</div>
+				<div ng-show="1!=temp">
+						<button class="profilebutton" ng-click="profile()" size="38">Profile</button><br>
+						<button class="history" ng-click="history()" size="38">History</button><br>
+						<button class="logout" ng-click="logout()" size="38">Logout</button>
+						<button class="addtocart" ng-click="cart()" size="38">Cart</button>
+				</div>
+		</div>
+		<section class = "card">	
+			<h1>Categories</h1>
+			<ul>
+				<li><button class="category" ng-click="Category1()" value="catemob">MobilePhone</button></li>
+				<li><button class="category" ng-click="Category2()" value="catemens">Men's Fashion</button></a></li>
+			</ul>
+		</section>
+		<centre>
+			<form class ="card1" name="myForm">
+				<br><br>
+				<span id="conformorder">Confirm Order...</span><br>
+				<br>
+				<span class="orderform">Street Name</span><br>
+				<textarea class="inputtype" type="text" name="address" ng-model="address" rows="1" cols="37" placeholder="Your street name.." required></textarea><br>
+
+
+				<span style="color:red" ng-show="myForm.address.$dirty && myForm.address.$invalid">
+						<span ng-show="myForm.$dirty && myForm.address.$error.required">Address is required.</span>
+						<span ng-show="myForm.$dirty && myForm.address.$invalid">Invalid address.</span>
+						</span>
+				<br>
+
+				<span class="orderform">City</span><br>
+				<input class="inputtype" type="text" ng-model="city" name="city" size="38" placeholder="Your city.."  required/><br>
+
+				<span style="color:red" ng-show="myForm.city.$dirty && myForm.city.$invalid">
+						<span ng-show="myForm.$dirty && myForm.city.$error.required">City is required.</span>
+						<span ng-show="myForm.$dirty && myForm.city.$invalid">Invalid city.</span>
+						</span>
+				<br>
+
+				<span class="orderform">Pincode</span><br>
+				<input class="inputtype" type="number" ng-model="pincode" name="pincode" size="38"  placeholder="Your pincode.." required ng-minlength="6" ng-maxlength="6"/><br>
+				
+				<span style="color:red" ng-show="myForm.pincode.$dirty && myForm.pincode.$invalid">
+						<span ng-show="myForm.pincode.$error.required">Pincode is required.</span>
+						<span ng-show="myForm.pincode.$error.minlength">Minimum length is 6.</span>
+						<span ng-show="myForm.pincode.$error.maxlength">Maximum length is 6.</span>
+						<span ng-show="myForm.pincode.$invalid">Invalid pincode.</span>
+						</span>
+				<br>
+				<input type="submit" class=" btn btn-primary inputtype" ng-click="submit()"
+					ng-disabled="myForm.$invlaid"/>
+			</form>
+		</centre>
+	</div>
+</body>
+</html>

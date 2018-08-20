@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Angularjs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  <script type="text/javascript" src="profile.js"></script>
+  <link rel="stylesheet" type="text/css" href="profile.css">
+  <link rel="stylesheet" type="text/css" href="index1.css">
+</head>
+
+<body style="background-color:white" class="body">
+  <div ng-app="angularProfile" ng-controller="angularCtrlProfile" >
+    <div class="stylesheet">
+      <header>
+          <a href="/index1.html"><img id="juju" src="juju.png"/></a>
+        <input type="text" placeholder="search here..." ng-model="search1" size="38" class="searchbar" />
+        <button class="search"  ng-click="search()" size="38">Search</button><br>
+      </header>
+      <div ng-show="1==temp">
+          <button class="SignUpbutton" ng-click="signupform()" size="38">SignUp</button><br>
+         <button class="Loginbutton" ng-click="login()" size="38">Login</button><br>	
+        </div>
+        <div ng-show="1!=temp">
+            <button class="profilebutton" ng-click="profile()" size="38">Profile</button><br>
+            <button class="history" ng-click="history()" size="38">History</button><br>
+            <button class="logout" ng-click="logout()" size="38">Logout</button>
+            <button class="addtocart" ng-click="cart()" size="38">Cart</button>
+        </div>
+    </div>
+    <section class = "card">
+      <h1>Categories</h1>
+      <ul>
+        <li><button class="category" ng-click="Category()" >MobilePhone</button></li>
+        <li><button class="category" ng-click="Category()" size="58">Men's Fashion</button></a></li>
+      </ul>
+    </section>
+    <form class ="card1">
+      <br><br>
+      <div id="b" >
+        <p>
+          <div id ="a">
+            FIRST NAME<br><div ng-bind="firstname"></div><br>
+            LAST NAME<br><div ng-bind="lastname"></div><br>
+            EMAIL ID <br><div ng-bind="email"></div><br>
+            PHONE NUMBER<br><div ng-bind="phonenumber "></div><br>
+          </div>
+        </p>
+      </div>
+    </form>
+  </div>  
+</div>
+</body>
+</html>

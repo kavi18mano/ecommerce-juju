@@ -1,0 +1,31 @@
+#login{
+	font-style: normal;
+	font-size: 25px;
+	text-align: center;
+}
+.stylesheet{
+  height: 135px;
+}
+.card1{
+	width: 30%;
+	margin-left: 35%; 
+	margin-top: 3%;
+	border: 5%;
+	color: black;
+	text-align: center;
+	font-family: sans-serif;
+	font-display: bold;
+}
+.loginform{
+	font-style: normal;
+	font-size: 20px; 
+	font-family: sans-serif;
+	padding: 6px 20px;
+	margin: 2px 0;
+}
+.inputtype{
+	border: solid; 
+	padding: 4px 6px;
+	margin: 6px 0;
+	width: 80%;
+}

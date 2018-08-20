@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ecommerce page</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="index1.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+	<div ng-app="angularApp" class="mainpage" ng-controller="angularCtrl">
+		<div class="stylesheet">
+			<header>
+				<a href="/index1.html"><img id="juju" src="juju.png"/></a>
+				<div>
+						<input type="text" placeholder="search here..." ng-model="search1" size="38" class="searchbar" />
+				</div>
+				<button class="search"  ng-click="search()" size="38">Search</button><br>
+			</header>
+			<div ng-show="1==temp">
+				<button class="SignUpbutton" ng-click="signupform()" size="38">SignUp</button><br>
+			 <button class="Loginbutton" ng-click="login()" size="38">Login</button><br>	
+			</div>
+			<div ng-show="1!=temp">
+					<button class="profilebutton" ng-click="profile()" size="38">Profile</button><br>
+					<button class="history" ng-click="history()" size="38">History</button><br>
+					<button class="logout" ng-click="logout()" size="38">Logout</button>
+					<button class="addtocart" ng-click="cart()" size="38">Cart</button>
+			</div>
+		</div>
+		<section class = "card">
+			<h1>Categories</h1>
+			<ul>
+				<li><button class="category" ng-click="Category1()" value="catemob">MobilePhone</button></li>
+				<li><button class="category" ng-click="Category2()" value="catemens">Men's Fashion</button></a></li>
+			</ul>
+		</section>
+		<div class="front"> 
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="front4.jpg" alt="Los Angeles" style="width:100%;">
+						</div>
+			
+						<div class="item">
+							<img src="front2.jpg" alt="Chicago" style="width:100%;">
+						</div>
+					
+						<div class="item">
+							<img src="front3.jpg" alt="New york" style="width:100%;">
+						</div>
+					</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+		</div>
+		<hr>
+			<div class="product-wrapper" ng-repeat = "product in products">
+				<a href="/productdetailsmerchant.html?product_id={{product.productid}}" >
+					<div class="sample1" ng.model='product.product'>
+						<img ng-src="{{product.img}}"/>
+					</div></a>
+					<div><b>Price : {{product.merchantdetails[0].price}}</b></div>
+					<div><b>ProductName : {{product.name}}</b></div>
+					<hr>
+				</div>
+			</div>
+		</body>
+		</html>

@@ -1,0 +1,33 @@
+.card1{
+	box-shadow: 0 8px 8px 0 rgba(0,0,0,0.6);
+	padding: 2px 5px;
+	transition: 0.3s;
+	width: 40%;
+	height: 240px;
+	margin-left: 35%; 
+	margin-top: 5%;
+	color: white;
+	text-align: center;
+}
+.descriorder{
+	background-color:white;
+	width: 55%;
+	padding: 5px;
+	float: left;
+	margin-left: 18%;
+	color:black;
+	text-align: center;
+	text-align: justify;
+	font-family: sans-serif;
+	font-display: bold;
+	font-size: 20px;
+}
+.thankyou{
+	text-align: center;
+	font-size: 24px;
+	margin-left: 26%;
+	margin-top: 3%;
+}
+#head{
+	color: black;
+}

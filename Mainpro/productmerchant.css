@@ -1,0 +1,43 @@
+.tablecart{
+	margin-left: 30%;
+}
+table {
+	border-collapse: collapse;
+	font-size: 20px;
+	color: black;
+}
+th,td {
+	text-align: left;
+	height: 40px;
+}
+.img1
+{
+	margin-left: 30%; 
+}
+.img1 img{
+	margin-top: 2%;
+	width: 43%;
+	max-height: 400px;
+	float: left;
+	display: flex;
+}
+.specification{ 
+	float: left;
+	font-size: 15px
+}
+.displaydecription{
+	font-size:"25px";
+	float: left;
+}
+.descriproduct{
+	background-color: white;
+	width: 57%;
+	padding: 6px;
+	float: left;
+}
+.productdetails{
+	margin-left: 60%;
+	padding: 10px ;
+	padding-left: 30px;
+	width: 20%;
+}

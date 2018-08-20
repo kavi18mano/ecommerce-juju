@@ -1,0 +1,30 @@
+#Createaccount{
+	font-style: normal;
+	font-size: 25px;
+	text-align: center;
+}
+.stylesheet{
+  height: 138px;
+}
+.card1{
+	width: 30%;
+	margin-left: 35%; 
+	color: black;
+	text-align: center;
+	font-family: sans-serif;
+	font-display: bold;
+}
+.signupform{
+	font-style: normal;
+	font-size: 20px; 
+	font-family: sans-serif;
+	padding: 6px 20px;
+	margin: 2px 0;
+	
+}
+.inputtype{
+	border: solid; 
+	padding: 4px 6px;
+	width: 80%;
+	float: flex;
+}

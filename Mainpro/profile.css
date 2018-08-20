@@ -1,0 +1,30 @@
+.body{
+  background-color:white;
+  margin:0px;
+}
+#a {
+  border: 2px solid black;
+	color: white;
+  padding: 20px;
+  width: 300px;
+  display: center;
+  background-color: 	#191970;
+}
+#b{
+  margin-top: 7%;
+  margin-left:20px;
+}
+.stylesheet{
+  height: 135px;
+}
+.card1{
+	padding: 5px 5px;
+  transition: 0.3s;
+	width: 30%;
+	height: 500px;
+	margin-left: 35%; 
+	color: white;
+	text-align: center;
+	font-family: sans-serif;
+	font-display: bold;
+}

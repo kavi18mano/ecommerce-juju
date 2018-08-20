@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up page</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  <script type="text/javascript" src=addtocart.js></script>
+  <link rel="stylesheet" type="text/css" href="addtocart.css">
+  <link rel="stylesheet" type="text/css" href="index1.css">
+</head>
+<body class="body">
+  <div ng-app='angularCart' ng-controller='angularCtrlCart'>
+    <div class="stylesheet">
+      <header>
+          <a href="/index1.html"><img id="juju" src="juju.png"/></a>
+        <input type="text" placeholder="search here..." size="38" class="searchbar" />
+        <button class="search" ng-click="search()" size="38">Search</button><br>
+      </header>
+      <div ng-show="1==temp">
+          <button class="SignUpbutton" ng-click="signupform()" size="38">SignUp</button><br>
+         <button class="Loginbutton" ng-click="login()" size="38">Login</button><br>	
+        </div>
+        <div ng-show="1!=temp">
+            <button class="profilebutton" ng-click="profile()" size="38">Profile</button><br>
+            <button class="history" ng-click="history()" size="38">History</button><br>
+            <button class="logout" ng-click="logout()" size="38">Logout</button>
+        </div>
+    </div>
+    <section class = "card">
+      <h1>Categories</h1>
+      <ul>
+        <li><button class="category" ng-click="Category1()" value="catemob">MobilePhone</button></li>
+        <li><button class="category" ng-click="Category2()" value="catemens">Men's Fashion</button></a></li>
+      </ul>
+    </section>
+    <div class ="tablecart">
+      <centre>
+       <table style="width:100%" >
+        <tr>
+          <th>ProductName</th>
+          <th>Price</th> 
+          <th>Quantity</th>
+          <th>MerchantName</th>
+          <th>Update</th>
+          <th>Delete</th>
+          <th>Proceed to checkout</th>
+        </tr>
+        <tr ng-repeat="item in cart">
+          <td ng-model="ngproductname">{{item.productName}}</td>
+          <td ng-model="ngprice">{{item.price}}</td>
+          <td class="quantity" ><input type="number" ng-model = "item.quantity" min=0 max=100 required/></td>
+            <td ng-model="ngmerchantname">{{item.merchantName}}</td>
+            <td class="update"><button ng-click="update(item.productName,item.quantity,item.merchantName)">Update</button></td>
+            <td class="delete"><button ng-click="delete(item.productName,item.quantity,item.merchantName)">Remove</button></td>
+            <td class="checkout"><button ng-click="checkout(item.productName,item.quantity,item.merchantName,item.price)">Proceed to checkout</button></td>
+        </tr>
+      </table>
+    </centre>
+    <div class="buyall">
+        <button ng-click="buyall()" >BuyAllProduct</button>
+    <div class="deleteall">
+        <button ng-click="deleteall()" >RemoveAllProduct</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

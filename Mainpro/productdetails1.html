@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product details</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="productdetails1.css">
+	<link rel="stylesheet" type="text/css" href="index1.css">
+	<script type="text/javascript" src=productdetails1.js></script>
+</head>
+<body ng-app='angularApp' ng-controller='angularCtrlProduct' class="body">
+	<div>
+		<div>
+			<header>
+					<a href="/index1.html"><img id="juju" src="juju.png"/></a>
+				<input type="text" placeholder="search here..." ng-model="search1" size="38" class="searchbar" />
+				<button class="search"  ng-click="search()" size="38">Search</button><br>
+			</header>
+			<div ng-show="1==temp">
+					<button class="SignUpbutton" ng-click="signupform()" size="38">SignUp</button><br>
+				 <button class="Loginbutton" ng-click="login()" size="38">Login</button><br>	
+				</div>
+				<div ng-show="1!=temp">
+						<button class="profilebutton" ng-click="profile()" size="38">Profile</button><br>
+						<button class="history" ng-click="history()" size="38">History</button><br>
+						<button class="logout" ng-click="logout()" size="38">Logout</button>
+						<button class="addtocart" ng-click="cart()" size="38">Cart</button>
+				</div>
+			<section class = "card">
+				<h1>Categories</h1>
+				<ul>
+					<li><button class="category" ng-click="Category1()" value="catemob">MobilePhone</button></li>
+					<li><button class="category" ng-click="Category2()" value="catemens">Men's Fashion</button></a></li>
+				</ul>
+			</section>
+		</div>
+		<centre>
+			<section>
+				<div class="img1">
+					<img ng-src="{{products.img}}"/>
+				</div>
+				<div class="productdetails">
+					<h1>{{products.name}}</h1>
+					<h3>Price : {{products.merchantDuplicate.price}} </h3>
+					<br>Ratings<br>
+					<br>
+					<form name="myForm">
+						<input type="number" name = "merchantrating" ng-model = "merchantrate.value2" required min=1 max=5/><br><br>
+						<span style="color:red" ng-show="myForm.merchantrating.$dirty && myForm.merchantrating.$invalid">
+							<span ng-show="myForm.merchantrating.$error.required">Ratings is required.</span>
+							<span ng-show="myForm.merchantrating.$error.minlength">Minimum rating is 1.</span>
+							<span ng-show="myForm.merchantrating.$error.maxlength">Maximum rating is 5.</span>
+							</span><br>
+						<label for="quantity">Qty: </label><br><br>
+						
+						<input min=1 type="number" name="quantity"ng-model = "quantitymod.value1" required min=1 max=100/><br><br>
+						<span style="color:red" ng-show="myForm.quantity.$dirty && myForm.quantity.$invalid">
+							<span ng-show="myForm.quantity.$error.required">Quantity is required.</span>
+							<span ng-show="myForm.quantity.$error.minlength">Minimum quantity is 1.</span>
+							<span ng-show="myForm.quantity.$error.maxlength">Maximum quantity is 100.</span>
+							</span><br>
+					</form>
+					<button class="BuyNow" ng-click="buyNow()" size="40" >BuyNow</button>
+					<button class="AddtoCart" ng-click="cart1()" size="38">AddtoCart</button><br>
+				</div>
+			</section>
+			<section>
+					<div class="specification">
+							<h2>Specification</h2>
+							<div class="descriproduct" ng-repeat="productkey in keyobj">
+								{{productkey}} :{{valuobj[productkey]}}
+							</div>
+						</div>
+				</div>
+			</section>
+		</centre>
+	</div>
+</body>
+</html>

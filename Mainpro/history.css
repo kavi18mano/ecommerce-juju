@@ -1,0 +1,15 @@
+.tablecart{
+  margin-left: 25%;
+}
+.stylesheet{
+  height: 126px;
+}
+table {
+  border-collapse: collapse;
+  font-size: 17px;
+  color: black;
+}
+th,td {
+  text-align: left;
+  height: 30px;
+}

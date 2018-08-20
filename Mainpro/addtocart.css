@@ -1,0 +1,59 @@
+.body{
+  background-color:white;
+  margin:0px;
+}
+.stylesheet{
+  height: 126px;
+}
+.tablecart{
+  margin-left: 27%;
+  margin-top: 0%;
+  margin-right: 3%;
+}
+table {
+  border-collapse: collapse;
+  font-size: 17px;
+  color: black;
+}
+th,td {
+  text-align: left;
+  height: 40px;
+}
+.deleteall button{
+  margin-left: 85%;
+  font-size: 18px; 
+  font-family: sans-serif;
+  margin-top: 2%;
+  background-color: red;
+  border: none;
+}
+.buyall button{
+  margin-left: 85%;
+  font-size: 18px; 
+  font-family: sans-serif;
+  margin-top: 2%;
+  float: left;
+  background-color: red;
+  border: none;
+}
+.quantity text{
+  width: 15%;
+  height: 40px;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+.update button{
+  font-size: 18px;
+  border: none;
+  background-color: yellowgreen;
+}
+.delete button{
+  font-size: 18px;
+  background-color: red;
+  border: none;
+}
+.checkout button{
+  font-size: 18px;
+  background-color: lightgreen;
+  border: none;
+}

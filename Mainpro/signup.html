@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up page</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script type="text/javascript" src=signup.js></script>
+	<link rel="stylesheet" type="text/css" href="signup.css">
+	<link rel="stylesheet" type="text/css" href="index1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+	<div ng-app="angularSignUp" ng-controller="angularCtrlSignUpPage" class="signupmain" >
+		<div class="stylesheet">
+			<header>
+					<a href="/index1.html"><img id="juju" src="juju.png"/></a>
+				<input type="text" placeholder="search here..." ng-model="search1" size="38" class="searchbar" />
+				<button class="search"  ng-click="search()" size="38">Search</button><br>
+			</header>
+			<div ng-show="1==temp">
+					<button class="SignUpbutton" ng-click="signupform()" size="38">SignUp</button><br>
+				 <button class="Loginbutton" ng-click="login()" size="38">Login</button><br>	
+				</div>
+				<div ng-show="1!=temp">
+						<button class="profilebutton" ng-click="profile()" size="38">Profile</button><br>
+						<button class="history" ng-click="history()" size="38">History</button><br>
+						<button class="logout" ng-click="logout()" size="38">Logout</button>
+						<button class="addtocart" ng-click="cart()" size="38">Cart</button>
+				</div>
+		</div>
+		<section class = "card">
+			<h1>Categories</h1>
+			<ul>
+				<li><button class="category" ng-click="Category1()" value="catemob">MobilePhone</button></li>
+				<li><button class="category" ng-click="Category2()" value="catemens">Men's Fashion</button></a></li>
+			</ul>
+		</section>
+		<centre>
+			<form class ="card1" name="myForm">
+				<span id="Createaccount">Create Account</span><br>
+				<br>
+
+				<!--firstname-->
+				<span class="signupform">First Name</span><br>
+				<input class="inputtype" type="text" name = "firstname" ng-model="firstName" placeholder="Your first name.."required ng-minlength="3"/><br>
+
+
+				<span style="color:red" ng-show="myForm.firstname.$dirty && myForm.firstname.$invalid">
+						<span ng-show="myForm.firstname.$error.required">Firstname is required.</span>
+						<span ng-show="myForm.firstname.$error.minlength">Minimum length is 3.</span>
+						<span ng-show="myForm.firstname.$invalid">Invalid firstname.</span>
+						</span>
+				<br>
+
+				<!--lastname-->
+				<span class="signupform">Last Name</span><br>
+				<input class="inputtype" type="text" name="lastname" ng-model="lastName" placeholder="Your last name.."required ng-minlength="3" /><br>
+				
+				<span style="color:red">
+						<span ng-show="myForm.$dirty && myForm.lastname.$error.required">Lastname is required.</span>
+						<span ng-show="myForm.$dirty && myForm.lastname.$error.minlength">Minimum length is 3.</span>
+						<span ng-show="myForm.$dirty && myForm.lastname.$invalid">Invalid lastname.</span>
+						</span>
+				<br>
+
+				<span class="signupform">Email address</span><br>
+				<input class="inputtype" type="email" name="email" ng-model="email" placeholder="Your email address.."required /><br>
+
+				<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+						<span ng-show="myForm.email.$error.required">Email is required.</span>
+						<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+						</span>
+				<br>
+
+				<span class="signupform">Password</span><br>
+				<input class="inputtype" type="password" name="password" ng-model="password" size="38" placeholder="Your password.."required  ng-minlength="5"/><br>
+					
+				<span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+						<span ng-show="myForm.password.$error.required">Password is required.</span>
+						<span ng-show="myForm.password.$error.minlength">Minimum length is 5.</span>
+						<span ng-show="myForm.password.$invalid">Invalid password.</span>
+						</span>
+				<br>
+
+				<span class="signupform">Confirm password</span><br>
+				<input class="inputtype" type="password" name="confpass" ng-model="confirmPassword" placeholder="Your confirm password.."required ng-minlength="5"/><br>
+
+			<span style="color:red" ng-show="myForm.confpass.$dirty && myForm.confpass.$invalid">
+						<span ng-show="myForm.confpass.$error.required">ConfirmPassword is required.</span>
+						<span ng-show="myForm.confpass.$error.minlength">Minimum length is 5.</span>
+						<span ng-show="myForm.confpass.$invalid">Invalid confirmPassword.</span>
+						</span>
+				<br>
+
+				<span class="signupform">Phone number</span><br>
+				<input class="inputtype" type="number" name="phonenumber" ng-model="phonenumber"  placeholder="Your phonenumber.." required ng-minlength="10" ng-maxlength="10"/><br>
+
+				<span style="color:red" ng-show="myForm.phonenumber.$dirty && myForm.phonenumber.$invalid">
+						<span ng-show="myForm.phonenumber.$error.required">Phonenumber is required.</span>
+						<span ng-show="myForm.phonenumber.$error.minlength">Minimum length is 10.</span>
+						<span ng-show="myForm.phonenumber.$error.maxlength">Maximum length is 10.</span>
+						<span ng-show="myForm.phonenumber.$invalid">Invalid phonenumber.</span>
+						</span>
+				<br>
+
+				<input type="submit" class=" btn btn-primary inputtype" ng-click="submit()"
+					ng-disabled="myForm.$invlaid"/>
+				<br>
+				<span class="signupform">Already have an account?</span>
+				<a href="/login.html">Signin here</a>
+			</form>
+		</centre>
+	</div>
+</body>
+</html>
